@@ -1,0 +1,92 @@
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	outline: none; /* no outline when you click on stuff */
+}
+
+*
+{
+	/* reset box model */
+	margin:0;
+	padding:0;
+	
+	/* highlighting anything on the page is forbidden */
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; 
+
+	/* default font is our open sans font */
+	font-family: 'open_sansregular';
+
+	color:#333;
+	-webkit-tap-highlight-color: transparent;
+}
+
+html, body
+{
+	position:relative;
+	overflow:hidden;
+}
+
+body {
+	background-color:#efefef;
+}
+
+.background
+{
+	display:block;
+	width:100%;
+	position: absolute;
+	z-index:0;
+}
+
+.content
+{
+	z-index:100;
+	position:absolute;
+	display:block;
+	top:0;
+	left:0;
+	z-index:1;
+}
+
+.content .title
+{
+	font-family: 'lemonmilk';
+	white-space: nowrap;
+	color:#00AEEF;
+	display:block;
+	position:relative;
+	margin:0 auto;
+	text-align: center;
+	padding-top:40px;
+}
+
+.content.inactive
+{
+	top:-100%;
+	left:-100%;
+}
+
+.content .title, .content .title *
+{
+	white-space: nowrap;
+}
+
+.overlay
+{
+	width:100%;
+	height:100%;
+	background-image: url(../img/overlay.png);
+	background-repeat:repeat-x repeat-y;
+	pointer-events:none;
+	position:absolute;
+	display:block;
+	top:0;
+	left:0;
+	z-index:9999;
+}

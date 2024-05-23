@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animaker Builder</title>
+	
+	<script type="text/javascript">
+		DEBUG=true
+		log = DEBUG ? console.log.bind(console) : function(){};
+	</script>
+
+	<!--
+		IPAD OPTIMIZATIONS 
+		shamelessly taken from here:
+			http://www.onlywebpro.com/2015/07/19/optimizing-full-screen-mobile-web-app-for-ios/
+	-->
+	<meta name="viewport" content = "width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
+	<meta name="apple-mobile-web-app-title" content="Animaker" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<link rel="apple-touch-icon" href="img/icon.png?v=1">
+
+	<!-- The only fonts we know and love -->
+	<link rel="stylesheet" href="./font/lemonmilk.css">
+	<link rel="stylesheet" href="./font/opensans.css">
+	
+	<!-- these fix some odd things about ipad -->
+	<!-- <link rel="stylesheet" href="./css/reset.css"> -->
+	<link rel="stylesheet" href="./css/normalize.css">
+
+	<!-- stylesheets for the individual sections of the app -->
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/attract.css">
+	<link rel="stylesheet" href="./css/intro.css">
+	<link rel="stylesheet" href="./css/gallery.css">
+	<link rel="stylesheet" href="./css/viewer.css">
+	<link rel="stylesheet" href="./css/done.css">
+
+	<!-- libs -->
+	<script type="text/javascript" src="./js/libs/jquery-v1.11.1.js"></script>
+	<script type="text/javascript" src="./js/libs/three.js"></script>
+	<script type="text/javascript" src="./js/libs/Detector.js"></script>
+	<script type="text/javascript" src="./js/libs/MTLLoader.js"></script>
+	<script type="text/javascript" src="./js/libs/OBJLoader.js"></script>
+	<script type="text/javascript" src="./js/libs/OrbitControls.js"></script>
+
+	<!-- other scripts are included after the body element at the bottom -->
+
+</head>
+
+<body>
+	<img src="./img/background.png" alt="" class="background"> <!-- BACKGROUND -->
+	
+	<!-- the overlay is a transparent fullscreen div that is un-clickable 
+		 
+	-->
+	<img src="./img/overlay.png" alt="" class="overlay">
+
+
+
+	<div class="content attract active"> <!-- ATTRACT -->
+		<img src="./img/logo_downscale.png" alt="" class="logo">
+		<span class="opensans">Touch screen to begin</span>
+	</div>
+
+
+
+	<div class="content intro inactive"> <!-- INTRO -->
+		<div class="title">Bring your creation to life!</div>
+
+		<ol class="instructions"> 
+			<li> <span>Build an animal.</span> </li>
+			<li> <span>Scan it.</span> </li>
+			<li> <span>I will recognize your animal and bring it to life!</span> </li>
+		</ol>
+
+		<img src="./img/getstarted.png" alt="" class="button">
+		<img src="./img/robot.png" alt="" class="robot">
+
+	</div>
+
+
+
+	<div class="content gallery inactive"> <!-- GALLERY -->
+		<div class="title">Choose an animal</div>
+		
+		<ul class="animals">
+			<li><img src="./img/duck.png" alt="duck"></li>
+			<li><img src="./img/giraffe.png" alt="giraffe"></li>
+			<li><img src="./img/camel.png" alt="camel"></li>
+			<li><img src="./img/gorilla.png" alt="gorilla"></li>
+			<li><img src="./img/rhino.png" alt="rhino"></li>
+			<li><img src="./img/elephant.png" alt="elephant"></li>
+			<li><img src="./img/turtle.png" alt="turtle"></li>
+			<li><img src="./img/eagle.png" alt="eagle"></li>
+			<li><img src="./img/alligator.png" alt="alligator"></li>
+		</ul>
+		
+
+	</div>
+
+
+
+	<div class="content viewer inactive"> <!-- 3D MODEL VIEWER -->
+		<div class="title">
+			Get inspired by how others created 
+			<span class="animal">this will be replaced with chosen animal from gallery</span>s
+		</div>
+
+		<div class="container">
+			<div id="viewer"></div>
+		</div>
+
+		<img src="" alt="" class="example">
+		<img src="" alt="" class="example">
+		<img src="" alt="" class="example">
+		<img src="" alt="" class="example">
+
+		<img src="./img/chooseanimal.png" alt="back" class="button back">
+		<img src="./img/finishedbuilding.png" alt="forward" class="button forward">
+	</div>
+
+
+
+	<div class="content done inactive"> <!-- DONE! -->
+		<div class="title">All done?</div>
+		<div class="text">Take your animal to my scan station!</div>
+	</div>
+
+
+
+
+</body>
+
+<!--content scripts down here to make sure the rest of
+	the page is rendered before the scripts begin running -->
+<script type="text/javascript" src="./js/viewer.js"></script>
+<script type="text/javascript" src="./js/main.js?v=12"></script>
+<script type="text/javascript" src="./js/gallery.js?v=23"></script>
+
+
+</html>

@@ -1,0 +1,65 @@
+.content.viewer .title, .content.viewer .title .animal
+{
+	font-family: 'lemonmilk';
+	color:#00AEEF;
+	position:relative;
+	margin:0 auto;
+	text-align: center;
+}
+
+.content.viewer .title
+{
+	padding-top:35px;
+}
+
+.content.viewer .button.forward
+{
+	width:20%;
+	position:absolute;
+	bottom:40px;
+	right:60px;
+	z-index:1000;
+}
+
+.content.viewer .button.back
+{
+	width:20%;
+	position:absolute;
+	bottom:40px;
+	left:60px;
+	z-index:1000;
+}
+
+.content.viewer .container
+{
+	top: 40px;
+    position: relative;
+    display: block;
+}
+
+.content.viewer .container #viewer
+{
+	border-radius: 5%;
+    overflow: hidden;
+    display: block;
+    width:500px;
+    margin: 0 auto;
+	border: 10px solid white;
+    background-color: #111;
+    box-shadow: 0 0 20px rgba(33,33,33,0.8);
+}
+
+.content.viewer .container #viewer canvas
+{
+	border-radius:5%;
+}
+
+.content.viewer .example
+{
+	width:180px;
+	position:absolute;
+	display:block;
+	border-radius:10%;
+	border:5px solid #efefef;
+	box-shadow: 0 0 20px rgba(33,33,33,0.8);
+}

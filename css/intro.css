@@ -1,0 +1,81 @@
+.content.intro .title
+{
+	font-family: 'lemonmilk';
+	color:#00AEEF;
+	display:block;
+	position:relative;
+	margin:0 auto;
+	text-align: center;
+	font-size:60px;
+}
+
+.content.intro ol
+{
+	list-style: none;
+	counter-reset: my-awesome-counter;
+	width:50%;
+	margin-top:60px;
+}
+
+.content.intro li
+{
+	counter-increment: my-awesome-counter;
+	margin: 3rem;
+	font-size: 50px;
+	font-family: 'open_sansregular';
+	text-indent:2em each-line;
+}
+
+.content.intro li span
+{
+	display:inline-block;
+	position:absolute;
+	width:500px;
+	margin-top:0.6em;
+	line-height:1.2em;
+}
+
+.content.intro li::before
+{
+	font-family: 'lemonmilk';
+	font-size:1.2em !important;
+	content: counter(my-awesome-counter);
+	background: #8cc63f;
+	width: 6rem;
+	height: 6rem;
+	border-radius: 50%;
+	display: inline-block;
+	line-height: 5.8rem;
+	color: white;
+	text-align: center;
+	margin-top:0.2em;
+	text-indent: 0.1em;
+	margin-right:0.5em;
+}
+
+.content.intro li:nth-child(2)::before{
+	background: #92278f;
+}
+
+.content.intro li:nth-child(3)::before{
+	background: #f7941d;
+}
+
+
+.content.intro .button
+{
+	width:20%;
+	position:absolute;
+	bottom:40px;
+	right:60px;
+	z-index:1000;
+}
+
+/*Adjust for 2048x1536 resolution*/
+.robot
+{
+	position:absolute;
+	right:0;
+	bottom:0;
+	height:90%;
+}

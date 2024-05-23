@@ -1,0 +1,27 @@
+.content.gallery .title
+{
+	font-size:80px;
+}
+
+.content.gallery .animals
+{
+	list-style-type:none;
+}
+
+.content.gallery .animals li
+{
+	position:fixed;
+	overflow:visible;
+	border-radius:15%;
+	background-color:white;
+	box-shadow: 0 0 20px rgba(33,33,33,0.8);
+}
+
+.content.gallery .animals li img
+{
+	width:200px;
+	height:200px;
+	border-radius:15%;
+	border:10px solid #efefef;
+}
+
